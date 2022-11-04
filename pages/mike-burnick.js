@@ -4,7 +4,6 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import { fetchAPI, getStrapiURL } from "../lib/api";
 import NextImage from "../components/Image";
-import { getStrapiMedia } from "../lib/media";
 
 const MikeBurnick = ({
   categories,
@@ -40,13 +39,7 @@ const MikeBurnick = ({
             </ReactMarkdown>
           </div>
           <div className="min-w-[400px]">
-            {/* <NextImage image={aboutMikeBurnick.attributes.image} /> */}
-            <Link
-              href={`${getStrapiMedia(aboutMikeBurnick.attributes.image)}`}
-              className="text-[#17bcb8] hover:text-[#007be0]"
-            >
-              <NextImage image={aboutMikeBurnick.attributes.image} />
-            </Link>
+            <NextImage image={aboutMikeBurnick.attributes.image} />
           </div>
         </div>
       </div>
